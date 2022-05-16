@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.itesca.moviles.chorizito.ui.home.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_prod"
+        android:name="com.itesca.moviles.chorizito.ui.productos.ProductosFragment"
+        android:label="@string/menu_prod"
+        tools:layout="@layout/fragment_productos">
+        <action
+            android:id="@+id/action_nav_prod_to_ingredientes2"
+            app:destination="@id/ingredientes2"
+            android:label="Ingredientes"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reg"
+        android:name="com.itesca.moviles.chorizito.ui.registrar.RegistrarFragment"
+        android:label="@string/menu_reg"
+        tools:layout="@layout/fragment_registrar" />
+
+    <fragment
+        android:id="@+id/nav_prov"
+        android:name="com.itesca.moviles.chorizito.ui.proveedor.proveedor"
+        android:label="@string/menu_prov"
+        tools:layout="@layout/fragment_proveedor" />
+    <fragment
+        android:id="@+id/nav_config"
+        android:name="com.itesca.moviles.chorizito.ui.config.ConfigFragment"
+        android:label="@string/menu_config"
+        tools:layout="@layout/config_fragment" />
+    <fragment
+        android:id="@+id/ingredientes2"
+        android:name="com.itesca.moviles.chorizito.ui.ingredientes.ingredientes"
+        android:label="ingredientes_fragment"
+        tools:layout="@layout/ingredientes_fragment" />
+</navigation>
